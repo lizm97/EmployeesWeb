@@ -1,0 +1,30 @@
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <th scope="row">{{ emp.id }}</th>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.salary }}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="deleteData(emp.id)">Delete</button>
+                <button class="btn btn-warning btn-sm mx-2" routerLink="edit/{{ emp.id }}">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+  <div><label for="a">Input:</label></div>
+  <input id="a" type="text" placeholder="CSS native fade out this placeholder text on click/focus" size="60">
+</div>

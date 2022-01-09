@@ -1,0 +1,53 @@
+
+<h1>Employee Search</h1>
+
+
+
+<div class="container">
+<form [formGroup]="formGroup">
+<mat-form-field>
+    <!-- <mat-label>
+        Employee
+    </mat-label> -->
+    <div><label for="a">Enter employee name</label>
+    <input matInput id="a" formControlName="employee"  
+        type="text"
+        placeholder="enter" 
+        [matAutocomplete]="auto" 
+    />
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let item of employees" [value]="item">
+            {{ item }}
+        </mat-option>
+    </mat-autocomplete></div>
+</mat-form-field>
+</form>
+</div>
+
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of filteredOptions;" >
+            <th  scope="row">{{ emp.id }}</th>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.salary }}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="deleteData(emp.id)">Delete</button>
+                <button class="btn btn-warning btn-sm mx-2" routerLink="edit/{{ emp.id }}">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
