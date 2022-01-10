@@ -10,9 +10,9 @@ h1{
     text-align: center;
     padding: 60px 0;
 }
-.mat-form-field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+
+
+    .mat-input-element {
+        background: rgba(112, 128, 144, 0.062);
+
+    }
