@@ -11,8 +11,6 @@ h1{
     padding: 60px 0;
 }
 
-
-    .mat-input-element {
-        background: rgba(112, 128, 144, 0.062);
-
-    }
+.mat-input-element {
+    background: rgba(112, 128, 144, 0.062);
+}
